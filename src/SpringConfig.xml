@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+   <!--  <bean id="greetingService" class="com.javatechnology.GreetingServiceImpl">
+    GreetingServiceImpl greetingService =new GreetingServiceImpl();
+    greetingService.setGreeting("Welcome To Spring");
+    
+    <property name="greeting" value="Welcome to Spring"></property>
+    </bean> -->
+    
+    <!-- <bean id="roundTable" class="com.javatechnology.RoundTable"> 
+     RoundTable roundTable=new RoundTable("RoundTable") 
+    roundTable.setHolyGrail()
+   
+    <constructor-arg value="RoundTable"></constructor-arg>
+    <property name="holyGrail" ref="grail"></property>
+    </bean>
+    <bean id="grail" class="com.javatechnology.HolyGrailImpl2"/> -->
+    <!-- <bean id="performer" class="com.javatechnology.PerformerImpl">
+    <constructor-arg value="15"></constructor-arg>
+    </bean> -->
+    <bean id="performer" class="com.javatechnology.PerformerImpl2">
+    <constructor-arg value="20"></constructor-arg>
+    <constructor-arg ref="poem"></constructor-arg>
+    </bean>
+    <bean id="poem" class="com.javatechnology.PoemImpl"/>
+    </beans>
