@@ -21,9 +21,40 @@
     <!-- <bean id="performer" class="com.javatechnology.PerformerImpl">
     <constructor-arg value="15"></constructor-arg>
     </bean> -->
-    <bean id="performer" class="com.javatechnology.PerformerImpl2">
+    <!-- <bean id="performer" class="com.javatechnology.PerformerImpl2">
     <constructor-arg value="20"></constructor-arg>
     <constructor-arg ref="poem"></constructor-arg>
     </bean>
-    <bean id="poem" class="com.javatechnology.PoemImpl"/>
+    <bean id="poem" class="com.javatechnology.PoemImpl"/> -->
+    
+    <!-- <bean id="performer" class="com.javatechnology.InstrumentList">
+    <property name="song" value="Jingle bells"></property>
+    <property name="instrument" ref="instrument"></property>
+    </bean>
+    <bean id ="instrument" class="com.javatechnology.InstrumentImpl"/> -->
+    
+    <!-- <bean id="performer" class="com.javatechnology.collection.OneManband">
+    <property name="instrument">
+    <set>
+    <ref bean="instrument"/>
+    <ref bean="guitar"/>
+     <ref bean="instrument"/>
+    </set>    
+    </property>
+    </bean>
+    <bean id ="instrument" class="com.javatechnology.InstrumentImpl"/>
+    <bean id ="guitar" class="com.javatechnology.collection.Guitar"/> -->
+    
+    <bean id="performer" class="com.javatechnology.collection.OneManband">
+    <property name="instrument">
+    <map>
+    <entry key="INSTRUMENT" value-ref="instrument"></entry>
+    <entry key="GUITAR"  value-ref="guitar"></entry>
+    <entry key="INSTRUMENT" value-ref="instrument"></entry>
+    </map>  
+    </property>
+    </bean>
+    <bean id ="instrument" class="com.javatechnology.InstrumentImpl"/>
+    <bean id ="guitar" class="com.javatechnology.collection.Guitar"/>
+    
     </beans>
