@@ -21,6 +21,9 @@
     <bean id="grail" class="com.javatechnology.HolyGrailImpl2"/> -->
     <!-- <bean id="performer" class="com.javatechnology.PerformerImpl">
     <constructor-arg value="15"></constructor-arg>
+    <constructor-arg value="15"></constructor-arg>
+    
+    
     </bean> -->
     <!-- <bean id="performer" class="com.javatechnology.PerformerImpl2">
     <constructor-arg value="20"></constructor-arg>
@@ -63,7 +66,8 @@
 	</bean>
 
 	<bean id="personDao" class="com.javatechnology.jdbc.PersonDaoImpl">
-		<property name="namedParamerJdbcTemplate" ref="namedParamerJdbcTemplate"></property>
+		<property name="dataSource" ref="dataSource"></property>
+		 <!-- <constructor-arg name="namedParamerJdbcTemplate" ref="namedParamerJdbcTemplate"></constructor-arg> -->
 	</bean>
 
 	<!-- <bean id="jdbcTemplate"
@@ -71,10 +75,10 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean> -->
 	
-	<bean id="namedParamerJdbcTemplate"
+	<!-- <bean id="namedParamerJdbcTemplate"
 		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
-		<property name="dataSource" ref="dataSource"></property>
-	</bean>
+		 <constructor-arg name="dataSource" ref="dataSource"></constructor-arg>
+	</bean> -->
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">

@@ -14,6 +14,11 @@ public class PersonServiceImpl implements PersonService{
 		return dao.savePerson(person);
 	}
 
+	@Override
+	public Person getPerson(Long id) {
+		return dao.getPerson(id);
+	}
+
 	
 
 }
