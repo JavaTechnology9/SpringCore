@@ -1,12 +1,21 @@
 package com.javatechnology;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+@Component("performer")
 public class InstrumentList implements Performer{
+	@Value("Jingle bells")
 	private String song;
+	@SpringAutowire
+	//@Inject
+	//@Qualifier("guitar")  //@Named("guitar")
 	private Instrument instrument;
 	public InstrumentList() {
 		// TODO Auto-generated constructor stub
 	}
-	
+	//@Autowired
 	public InstrumentList(Instrument instrument) {
 		this.instrument=instrument;
 	}
@@ -14,7 +23,7 @@ public class InstrumentList implements Performer{
 	public void setSong(String string) {
 		song=string;
 	}
-	
+	//@Autowired
 	public void setInstrument(Instrument instrument) {
 		this.instrument=instrument;
 	}
