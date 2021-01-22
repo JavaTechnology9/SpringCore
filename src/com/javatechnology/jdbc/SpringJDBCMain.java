@@ -11,13 +11,13 @@ public class SpringJDBCMain {
 	public static void main(String[] args) {
 		ApplicationContext context=new ClassPathXmlApplicationContext("SpringConfig.xml");
 		PersonService personService=(PersonService)context.getBean("personService");
-		/*Person person=new Person();
-		person.setId(18);
-		person.setName("SPRINGNAMEDpARAMETER");
-		person.setAddress("SPRING_NAMEDPARAMETER_ADDRESS");
-		personService.savePerson(person);*/
-		Person person = personService.getPerson((long) 18);
-		System.out.println(person.getAddress());
+		Person person=new Person();
+		person.setId(26);
+		person.setName("UPDATE2");
+		//person.setAddress("SPRING_NAMED_ANNOTATIONS");
+		personService.updatePerson(person);
+		/*Person person = personService.getPerson((long) 25);
+		System.out.println(person.getAddress());*/
 
 	}
 

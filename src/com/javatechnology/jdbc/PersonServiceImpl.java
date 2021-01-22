@@ -1,8 +1,12 @@
 package com.javatechnology.jdbc;
 
-import com.javatechnology.jdbc.model.Person;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.javatechnology.jdbc.model.Person;
+@Service("personService")
 public class PersonServiceImpl implements PersonService{
+	@Autowired
 	private PersonDao dao;
 	
 	public void setPersonDao(PersonDao dao) {
@@ -17,6 +21,11 @@ public class PersonServiceImpl implements PersonService{
 	@Override
 	public Person getPerson(Long id) {
 		return dao.getPerson(id);
+	}
+
+	@Override
+	public Person updatePerson(Person person) {
+		return dao.updatePerson(person);
 	}
 
 	
