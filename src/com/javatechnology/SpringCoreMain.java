@@ -18,7 +18,7 @@ public class SpringCoreMain {
 		service.sayGreeting();*/
 		Performer performer=(Performer)context.getBean("performer");
 		performer.perform();
-		
+		// adding new commit
 		
 
 	}
