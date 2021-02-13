@@ -10,7 +10,7 @@ import org.springframework.core.io.FileSystemResource;
 public class SpringCoreMain {
 
 	public static void main(String[] args) {
-		@SuppressWarnings("deprecation")
+		@SuppressWarnings({ "resource" })
 		//BeanFactory factory=new XmlBeanFactory(new FileSystemResource("C:\\Users\\Suresh\\Downloads\\Spring&SpringBoot08\\Spring07\\src\\SpringConfig.xml"));
 		//ApplicationContext context=new FileSystemXmlApplicationContext("C:\\Users\\Suresh\\Downloads\\Spring&SpringBoot08\\Spring07\\src\\SpringConfig.xml");
 		ApplicationContext context=new ClassPathXmlApplicationContext("SpringConfig.xml");
